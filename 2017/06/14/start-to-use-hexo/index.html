@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Chi Chung Yi">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="使用 hexo"/>
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="Demonic&#39;s Blog"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://ian910297.github.io/blogundefined"/>
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+
+  <!-- Site Title -->
+  <title>Demonic's Blog</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/blog/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  
+  <link rel="stylesheet" href="/blog/css/style.light.css">
+
+  <!-- Google Analytics -->
+  
+
+</head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">使用 hexo</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/blog/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/blog/archives">
+                  
+                  Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://github.com/ian910297">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://ian910297.github.io">
+                  
+                  Github Pages
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By Chi Chung Yi</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2017-06-14</span>
+            <span class="time">19:32:20</span>
+          </span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/blog/tags/hexo/">#hexo</a> <a class="tag" href="/blog/tags/git/">#git</a> <a class="tag" href="/blog/tags/github/">#github</a> <a class="tag" href="/blog/tags/github-pages/">#github pages</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <h2 id="為什麼選擇-hexo"><a href="#為什麼選擇-hexo" class="headerlink" title="為什麼選擇 hexo"></a>為什麼選擇 hexo</h2><ul>
+<li>免費就能架設blog在網路上</li>
+<li>順便練功, 熟悉一下新的小玩具</li>
+<li>走過路過不要錯過, 很多事情是沒有理由的</li>
+</ul>
+<h2 id="開專案"><a href="#開專案" class="headerlink" title="開專案"></a>開專案</h2><h4 id="專案名稱"><a href="#專案名稱" class="headerlink" title="專案名稱"></a>專案名稱</h4><p>在 <a href="https://github.com" target="_blank" rel="external">github</a> 開一個專案來放你的 <a href="https://hexo.io" target="_blank" rel="external">hexo</a><br>專案名稱不一定要叫做 [username].github.io<br>branch名稱是不是master, gh-pages也都不重要<br>因為github repo 的 setting可以設定<br>你現在要mapping 的 branch 到底要那一個<br>只不過預設mapping 是 gp-pages<br>去網頁按幾個按鈕就解決了<br>就看你把build出來的檔案放在那一個branch</p>
+<p>以我自己為例<br>不使用[username].github.io為專案名稱<br>把hexo放在其他repo<br>網址會長這樣 <a href="https://username.github.io/repo" target="_blank" rel="external">https://username.github.io/repo</a></p>
+<ul>
+<li>確保兩個branch不會互相污染<br>一邊放原始檔<br>一邊放發布的網頁<br>所以開branch上面我建議使用</li>
+</ul>
+<pre><code>$ git checkout --orphan newbranch
+$ git rm -rf . # 砍掉所有檔案重來
+...  # 加新檔案
+$ git add .
+$ git commit -m &apos;create new branch&apos;
+$ git push -u origin newbranch
+</code></pre><p>這樣就跟原本的 master 沒有關係了</p>
+<h2 id="環境架設"><a href="#環境架設" class="headerlink" title="環境架設"></a>環境架設</h2><p>以下只列我覺得是重點的部份</p>
+<pre><code>$ git clone your_project
+$ cd your_project
+$ git checkout source_branch # 切換到原始檔的branch, 沒有的話就開一個
+$ npm install hexo-cli -g # 安裝 hexo 可能需要 sudo
+$ hexo init blog # 隨便新開一個hexo專案
+$ cp blog/* ./ # 複製所有的檔案到source_branch底下
+$ cp blog/.gitignore ./ # 不要忘了.gitignore
+$ rm -rf blog # blog 已經沒有利用價值了
+... # 以下調整 hexo
+... # 
+... # themes 要特別注意
+... # git clone themes 之後
+... # 要將資料夾名稱的 hexo-theme- 移除
+... # 只留下後面
+... # 然後要刪掉裡面的 .git 資料夾
+$ git clone https://github.com/iissnan/hexo-theme-next themes/next
+$ rm -rf themes/next/.git
+... # 
+... # 寫設定檔 _config.yml
+... # url 跟 repo 要特別修改
+... # deploy git的相關設定也要寫好 
+... # theme有修改在用就好
+$ hexo generate
+$ hexo deploy
+... # deploy之前記得先用 hexo server自己測試
+... # 最後記得把source_branch也push上去就大功告成
+</code></pre><p>其他細節就參閱 <a href="https://hexo.io" target="_blank" rel="external">hexo 官網</a><br>以及 <a href="https://liguanghe.github.io/2017/05/21/blogRebuilt/" target="_blank" rel="external">李广鹤的博客 - hexo 博客的神坑及本质原因</a></p>
+<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><h4 id="git"><a href="#git" class="headerlink" title="git"></a>git</h4><ul>
+<li><a href="https://ihower.tw/blog/archives/5691" target="_blank" rel="external">git orphan 這篇文章的方法二</a></li>
+</ul>
+<h4 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a>hexo</h4><ul>
+<li><a href="https://github.com/hexojs/hexo" target="_blank" rel="external">hexo github</a></li>
+<li><a href="https://hexo.io/" target="_blank" rel="external">hexo 官網</a></li>
+<li><a href="https://liguanghe.github.io/2017/05/21/blogRebuilt/" target="_blank" rel="external">李广鹤的博客 - hexo 博客的神坑及本质原因</a></li>
+</ul>
+<h4 id="superman-大神-不知道怎麼辦的時候就問他吧"><a href="#superman-大神-不知道怎麼辦的時候就問他吧" class="headerlink" title="superman 大神 不知道怎麼辦的時候就問他吧"></a>superman 大神 不知道怎麼辦的時候就問他吧</h4><ul>
+<li><a href="https://github.com/dansnow" target="_blank" rel="external">dansnow</a></li>
+</ul>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+<script src="/blog/js/highlight.pack.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+
