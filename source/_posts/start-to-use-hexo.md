@@ -13,8 +13,10 @@ tags:
 * 順便練功, 熟悉一下新的小玩具
 * 走過路過不要錯過, 很多事情是沒有理由的
 
+--- 
+
 ## 開專案
-#### 專案名稱
+**專案名稱**
 
 在 [github](https://github.com) 開一個專案來放你的 [hexo](https://hexo.io)
 專案名稱不一定要叫做 [username].github.io
@@ -31,7 +33,7 @@ branch名稱是不是master, gh-pages也都不重要
 把hexo放在其他repo
 網址會長這樣 https://username.github.io/repo
 
-* 確保兩個branch不會互相污染
+**確保兩個branch不會互相污染**
 一邊放原始檔
 一邊放發布的網頁
 所以開branch上面我建議使用
@@ -46,6 +48,8 @@ branch名稱是不是master, gh-pages也都不重要
 
 
 這樣就跟原本的 master 沒有關係了
+
+---
 
 ## 環境架設
 以下只列我覺得是重點的部份
@@ -80,15 +84,23 @@ branch名稱是不是master, gh-pages也都不重要
 其他細節就參閱 [hexo 官網](https://hexo.io)
 以及 [李广鹤的博客 - hexo 博客的神坑及本质原因](https://liguanghe.github.io/2017/05/21/blogRebuilt/)
 
+---
+
 ## 參考資料
 #### git
+
 * [git orphan 這篇文章的方法二](https://ihower.tw/blog/archives/5691)
 
 #### hexo
+
 * [hexo github](https://github.com/hexojs/hexo)
 * [hexo 官網](https://hexo.io/)
 * [李广鹤的博客 - hexo 博客的神坑及本质原因](https://liguanghe.github.io/2017/05/21/blogRebuilt/)
+* [hexo theme NexT](http://theme-next.iissnan.com/)
+* [counter service - leancloud](https://leancloud.cn/)
+* [comment service - disqus](https://disqus.com/)
 
 #### superman 大神 不知道怎麼辦的時候就問他吧
+
 * [dansnow](https://github.com/dansnow)
 
