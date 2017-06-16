@@ -23,7 +23,7 @@ tags:
 branch名稱是不是master, gh-pages也都不重要
 因為github repo 的 setting可以設定
 你現在要mapping 的 branch 到底要那一個
-只不過預設mapping 是 gp-pages
+只不過預設mapping 是 gh-pages
 去網頁按幾個按鈕就解決了
 就看你把build出來的檔案放在那一個branch
 
