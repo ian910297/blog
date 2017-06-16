@@ -124,6 +124,8 @@ menu:
   tags: /tags/
   #sitemap: /sitemap.xml
   #commonweal: /404.html
+  github: https://github.cim/ian910297
+  github_page: https://ian910297.github.io
 
 
 # Enable/Disable menu icons.
@@ -143,7 +145,7 @@ menu_icons:
   sitemap: sitemap
   commonweal: heartbeat
   github: github
-  demonic: meh-o
+  github_page: user-circle-o
 
 
 
