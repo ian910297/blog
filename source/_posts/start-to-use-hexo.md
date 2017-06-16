@@ -6,6 +6,9 @@ tags:
 - git
 - github
 - github pages
+categories:
+- front-end
+- programming
 ---
 
 ## 為什麼選擇 hexo
@@ -17,6 +20,7 @@ tags:
 
 ## 開專案
 **專案名稱**
+<!-- more -->
 
 在 [github](https://github.com) 開一個專案來放你的 [hexo](https://hexo.io)
 專案名稱不一定要叫做 [username].github.io
@@ -26,7 +30,6 @@ branch名稱是不是master, gh-pages也都不重要
 只不過預設mapping 是 gh-pages
 去網頁按幾個按鈕就解決了
 就看你把build出來的檔案放在那一個branch
-
 
 以我自己為例
 不使用[username].github.io為專案名稱

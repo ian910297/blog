@@ -4,10 +4,10 @@
 
 # Site
 title: Demonic's Blog
-subtitle:
-description:
-author: Chi Chung Yi
-language: zh_tw
+subtitle: 
+description: 
+author: Chi Chung Yi(紀重禕)
+language: 
 timezone: Asia/Taipei
 
 # URL
@@ -118,11 +118,10 @@ index_with_subtitle: false
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
 menu:
   home: /
-  #categories: /categories/
+  categories: /categories
   #about: /about/
   archives: /archives/
   tags: /tags/
-  github: //github.com/ian910297
   #sitemap: /sitemap.xml
   #commonweal: /404.html
 
@@ -144,6 +143,7 @@ menu_icons:
   sitemap: sitemap
   commonweal: heartbeat
   github: github
+  demonic: meh-o
 
 
 
